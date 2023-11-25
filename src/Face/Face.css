@@ -1,0 +1,90 @@
+
+
+
+.face-block {
+    margin: 0 auto;
+    height: 100px;
+    /* Задайте потрібну висоту */
+    width: 100px;
+    /* Задайте потрібну ширину */
+    position: relative;
+}
+
+.eyes-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.eye {
+    position: relative;
+    height: 40px;
+    /* Задайте потрібну висоту */
+    width: 40px;
+    /* Задайте потрібну ширину */
+    border: 2px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.pupil {
+    position: absolute;
+    height: 10px;
+    /* Задайте потрібну висоту */
+    width: 10px;
+    /* Задайте потрібну ширину */
+    border-radius: 50%;
+    background: #fff;
+    animation: blink 3s linear infinite;
+}
+
+.mouth-wrapper {
+    height: 30px;
+    /* Задайте потрібну висоту */
+    width: 60px;
+    /* Задайте потрібну ширину */
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+.mouth {
+    margin: 0 auto;
+    height: 60px;
+    /* Задайте потрібну висоту */
+    width: 60px;
+    /* Задайте потрібну ширину */
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, #A53860 0%, #A53860 50%, transparent 50%, transparent 100%), radial-gradient(circle, #A53860 0%, #A53860 50%, transparent 50%, transparent 100%), linear-gradient(to right, #FFFFFF 0%, #FFFFFF 40%, transparent 40%, transparent 60%, #FFFFFF 60%, #FFFFFF 100%), linear-gradient(to right, #450920 0%, #450920 100%);
+    background-size: 30px 30px, 30px 30px, 20px 20px, 100%;
+    background-repeat: no-repeat;
+    background-position: 20% 160%, 70% 160%, 50% 50%, 0 0;
+    transition: all 0.3s ease;
+}
+
+.mouth.-closed {
+    height: 30px;
+    /* Задайте потрібну висоту */
+    width: 30px;
+    /* Задайте потрібну ширину */
+    transform: translateY(0);
+    background-size: 10px 10px, 10px 10px, 20px 20px, 100%;
+    background-position: 20% 150%, 70% 150%, 50% -200%, 0 0;
+}
+
+@keyframes blink {
+    0% {
+        height: 10px;
+    }
+
+    96% {
+        height: 10px;
+    }
+
+    98% {
+        height: 1px;
+    }
+
+    100% {
+        height: 10px;
+    }
+}
